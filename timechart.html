@@ -1,26 +1,29 @@
 ﻿<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title>ZoomCharts</title>
+    <title>ZoomCharts with MongoDB - integration example</title>
+    <meta name="keywords" content="ZoomCharts, MongoDB, Example, integration"/>
+    <meta name="description" content="ZoomCharts with MongoDB and PHP integration example" />
     <style>
         body, html {
             margin: 0;
             padding: 0;
             overflow: hidden;
         }
-
-        #chart {
+        #chart{
             /* expand the chart to the whole window height */
             height: 100vh;
-        }
-
-        .DVSL-bar-left {
-            /* workaround so that "Fork on GitHub" link does not overlap the toolbar */
-            padding-left: 70px !important;
         }
     </style>
 </head>
 <body>
+    <header style="position:relative">
+        <h1><a target="_blank" href="https://zoomcharts.com">ZoomCharts</a> integration example with <a target="_blank" href="http://mongodb.com">MongoDB</a> and <a href="http://php.net" target="_blank">PHP</a></h1>
+        <p>In this example we are showing you how ZoomCharts can fetch data interactively from MongoDB database through PHP middleware. See the source <a target="_blank" href="https://github.com/zoomcharts/mongodb-php">code here</a>.</p>
+        <p>As you are zooming in on time periods, ZoomCharts connects to the underlying MongoDB database to fetch data in the desired agregation unit for the required time period.</p>
+        <p>If you have data in MongoDB and if you have a time field in your records, you can use the example code to attach your data instantly to ZoomCharts.</p>
+    </header>
+    <a href="https://github.com/zoomcharts/mongodb-php" target="_blank"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/e7bbb0521b397edbd5fe43e7f760759336b5e05f/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f677265656e5f3030373230302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png"></a>
     <div id="chart"></div>
 
     <script src="https://cdn.zoomcharts-cloud.com/1/latest/zoomcharts.js"></script>
@@ -47,7 +50,19 @@
                         low: 1
                     },
                     style: {
-                        pattern: "bar"
+                        increase:{
+                            candlestick:{
+                                fillColor: "#57B852",
+                                lineColor: "#57B852"
+                            }
+                        },
+                        decrease:{
+                            candlestick:{
+                                fillColor: "#F65472",
+                                lineColor: "#F65472"
+                            }
+                        }
+                        //pattern: "bar"
                     }
                 },
                 {
@@ -69,6 +84,5 @@
         });
     </script>
 
-    <a href="https://github.com/zoomcharts/mongodb-php"><img style="position: absolute; top: 0; left: 0; border: 0;" src="https://camo.githubusercontent.com/121cd7cbdc3e4855075ea8b558508b91ac463ac2/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f6c6566745f677265656e5f3030373230302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_left_green_007200.png"></a>
 </body>
 </html>

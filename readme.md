@@ -13,6 +13,9 @@ on how to install that into your own project.
 To run the example, you must install the sample data provided by running:
 
     mongoimport --db zoomcharts --collection eur-usd --drop --file eur-usd.json
+# LIVE DEMO
+
+To view a live demo, see <https://mongodb-php.zoomcharts.com/>
 
 # License
 

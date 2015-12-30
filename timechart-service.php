@@ -3,6 +3,7 @@ try
 {
     // included for debugging purposes - should be removed in any production code
     ini_set('display_errors', 1);
+    date_default_timezone_set("UTC");
 
     // include the mongodb library
     require 'vendor/autoload.php';
