@@ -10,9 +10,10 @@ try
 
 
 
-    // connect to the database. replace "zoomcharts.eur-usd" with where you imported the sample dataset
-    $manager = new MongoDB\Driver\Manager("mongodb://localhost:27017");
-    $collection = new MongoDB\Collection($manager, "zoomcharts.eur-usd");
+    // connect to the database. replace "mongo-example.eur_usd" with where you imported the sample dataset
+    //$manager = new MongoDB\Driver\Manager("mongodb://localhost:27017");
+    $manager = new MongoDB\Driver\Manager("mongodb://web:yourpasswordgoeshere@10.99.0.78:27017/mongo-example");
+    $collection = new MongoDB\Collection($manager, "mongo-example.eur_usd");
 
 
 

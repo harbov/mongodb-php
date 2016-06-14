@@ -8,11 +8,23 @@ Note that this repository already includes the `MongoDB PHP Library`
 that was installed using `composer`. See <http://mongodb.github.io/mongo-php-library/>
 on how to install that into your own project.
 
+# Chart types:
+
+1. TimeChart
+2. PieChart
+3. NetChart
+4. FacetChart
+5. GeoChar
+
 # Sample data
 
 To run the example, you must install the sample data provided by running:
 
-    mongoimport --db zoomcharts --collection eur-usd --drop --file eur-usd.json
+    mongoimport --db mongo-example --collection eur_usd --drop --file data/eur-usd.json
+    mongoimport --db mongo-example --collection continental --drop --file data/continental.json
+    mongoimport --db mongo-example --collection cities --drop --file data/cities.json
+    mongoimport --db mongo-example --collection firends_nodes --drop --file data/friends-nodes.json
+    mongoimport --db mongo-example --collection friends_links --drop --file data/friends-links.json
 # LIVE DEMO
 
 To view a live demo, see <https://mongodb-php.zoomcharts.com/>
