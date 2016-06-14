@@ -14,7 +14,7 @@ on how to install that into your own project.
 2. PieChart
 3. NetChart
 4. FacetChart
-5. GeoChar
+5. GeoChart
 
 # Sample data
 
