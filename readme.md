@@ -18,16 +18,22 @@ on how to install that into your own project.
 
 # Sample data
 
-To run the example, you must install the sample data provided by running:
+To run all examples, you must install the sample data provided by running:
 
+**For TimeChart:**
     mongoimport --db mongo-example --collection eur_usd --drop --file data/eur-usd.json
+**For PieChart and FacetChart:**
     mongoimport --db mongo-example --collection continental --drop --file data/continental.json
-    mongoimport --db mongo-example --collection cities --drop --file data/cities.json
+**For NetChart:**
     mongoimport --db mongo-example --collection firends_nodes --drop --file data/friends-nodes.json
     mongoimport --db mongo-example --collection friends_links --drop --file data/friends-links.json
+**For GeoChart:**
+    mongoimport --db mongo-example --collection cities --drop --file data/cities.json
 # LIVE DEMO
 
 To view a live demo, see <https://mongodb-php.zoomcharts.com/>
+
+For more information visit <https://zoomcharts.com/>
 
 # License
 
