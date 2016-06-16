@@ -13,13 +13,15 @@
         }
         #chart{
             /* expand the chart to the whole window height */
-            height: 100%;
+            height: 450px;
+            max-height:100vh;
         }
     </style>
 </head>
 <body>
     <header style="position:relative">
-        <h1><a target="_blank" href="https://zoomcharts.com">ZoomCharts</a> NetChart integration example with <a target="_blank" href="http://mongodb.com">MongoDB</a> and <a href="http://php.net" target="_blank">PHP</a></h1>
+        <h1><a href="/index.html">Index</a></h1>
+        <h2><a target="_blank" href="https://zoomcharts.com">ZoomCharts</a> NetChart integration example with <a target="_blank" href="http://mongodb.com">MongoDB</a> and <a href="http://php.net" target="_blank">PHP</a></h2>
         <p>In this example we are showing you how ZoomCharts can fetch data interactively from MongoDB database through PHP middleware. See the source <a target="_blank" href="https://github.com/zoomcharts/mongodb-php">code here</a>.</p>
         <p>Please visit <a target="_blank" href="https://zoomcharts.com/developers/en/net-chart/api-reference/settings.html">NetChart documentation</a> for more information.</p>
         <p>Nodes are linked to each other so ZoomCharts connects to MongoDB database to fetch requested data (both links and nodes). Click on any node to load more data.</p>
@@ -31,7 +33,7 @@
     <script>
         var chart = new ZoomCharts.NetChart({
         container: "chart",
-        area: { height: 350 },
+        area: { height: "450px" },
         data: { 
             url: "/netchart-service.php?mtd=getNodesByIds"
         },
